@@ -7,8 +7,8 @@ class Rectangle:
     
     def __init__(self, width=0, height=0):
         """Initialize a new square"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -47,5 +47,13 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__height + self.__width)
-
-
+    def __str__ (self):
+        """Prints rectangle with #"""
+        if self.__height == 0 or self.__width == 0:
+            return "" 
+        result = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                result += "#"
+            result += "\n"
+        return result
