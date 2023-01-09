@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-base = __import__('7-base_geometry').BaseGeometry
+
 """A module for a child class Rectangle"""
+
+
+base = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(base):
