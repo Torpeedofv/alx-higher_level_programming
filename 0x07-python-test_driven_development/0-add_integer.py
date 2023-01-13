@@ -3,7 +3,8 @@
 
 
 def add_integer(a, b=98):
-    """This is a function that adds to integers and returns the sum of the integers"""
+    """This is a function that adds to integers and returns the\
+            sum of the integers"""
 
     if type(a) is float:
         a = int(a)
