@@ -12,7 +12,8 @@ def matrix_divided(matrix, div):
         subMat = []
         for j in i:
             if not isinstance(j, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix\
+                        (list of lists) of integers/floats")
             multInt = j / 3
             subMat.append(multInt)
         newMat.append(subMat)
