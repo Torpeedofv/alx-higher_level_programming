@@ -66,7 +66,13 @@ class TestRectangle(unittest.TestCase):
     def test_update(self):
         """Tests the Class update that assigns an argument to each attribute\
                 """
-        rec = Rectangle(10, 10, 10, 10)
-        r1 = rec.update(89)
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r1.x, 4)
+        self.assertEqual(r1.y, 5)
 
+    def test_
 
