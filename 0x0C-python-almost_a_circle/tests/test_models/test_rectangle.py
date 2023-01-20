@@ -7,6 +7,7 @@ from io import StringIO
 import unittest
 from models.rectangle import Rectangle
 from models.base import Base
+ 
 
 class TestRectangle(unittest.TestCase):
     def test_ids(self):
@@ -74,5 +75,25 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.x, 4)
         self.assertEqual(r1.y, 5)
 
-    def test_
+    def test_dictionary(self):
+        """tests dictionary"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(10, 2, 1, 9)
+        r1_dictionary = r1.to_dictionary()
+        self.assertDictEqual(r1_dictionary, {'x': 1, 'y': 9, 'width': 10, 'height': 2, 'id': 1})
+        r1 = Rectangle(1, 1)
+        r1_dictionary = r1.to_dictionary()
+        self.assertDictEqual(r1_dictionary, {'x': 0, 'y': 0, 'width': 1, 'height': 1, 'id': 2})
 
+    def test_RectCreate(self):
+        """tests create"""
+        Base._Base__nb_objects = 0
+        s1 = Rectangle(10, 2)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Rectangle.create(**s1_dictionary)
+        self.assertFalse(s1 is s2)
+        self.assertFalse(s1 == s2)
+
+
+    if __name__ == '__main__':
+        unittest.main()
