@@ -41,3 +41,33 @@ class Base:
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes set"""
+
+        if cls.__name__ == "Rectangle":
+            dummy_instance = cls(1, 1)
+        if cls.__name__ == "Square": 
+            dummy_instance = cls(1)
+        dummy_instance.update(**dictionary)
+        return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+
+        filename = f"{cls.__name__}.json"
+        try:
+            with open(filename) as f:
+                list_of_dicts = cls.from_json_string(f.read())
+        except (FileNotFoundError):
+            return []
+        instances_list = []
+        for d in list_of_dicts:
+            instances_list.append(cls.create(**d))
+        return instances_list
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serializes in CSV"""
+        
