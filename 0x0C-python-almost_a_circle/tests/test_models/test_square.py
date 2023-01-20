@@ -19,3 +19,4 @@ class TestRectangle(unittest.TestCase):
         s3.id = "b"
         self.assertEqual(s3.id, "b")
 
+    def test_
