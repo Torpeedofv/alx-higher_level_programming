@@ -4,11 +4,10 @@ const arg = process.argv.slice(2);
 if (arg.length <= 1) {
   console.log(0);
 } else {
-  function compare(a, b) {
+  function compare (a, b) {
     return a - b;
   }
   arg.sort(compare);
-  secBig = arg.length - 2;
+  const secBig = arg.length - 2;
   console.log(arg[secBig]);
-  
 }
