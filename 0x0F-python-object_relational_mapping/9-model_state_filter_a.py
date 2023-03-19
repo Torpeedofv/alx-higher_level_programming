@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """a script that lists all state objects that
-contain the leteter a from the database
+contain the letter a from the database
 """
 
 from model_state import State, Base
