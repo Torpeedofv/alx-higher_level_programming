@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""A script that lists all cities from the database
+"""
+
 import MySQLdb
 import sys
 if __name__ == "__main__":
