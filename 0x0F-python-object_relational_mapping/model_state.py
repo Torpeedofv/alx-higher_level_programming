@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """contains the definition of a state and an instance"""
 
 from sqlalchemy.ext.declarative import declarative_base
