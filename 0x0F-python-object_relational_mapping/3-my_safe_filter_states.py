@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Write a script that takes in arguments and displays
+all values in states table of hbtn_0e_0u_usa where
+name matches the argument
+"""
 import MySQLdb
 import sys
 if __name__ == "__main__":
