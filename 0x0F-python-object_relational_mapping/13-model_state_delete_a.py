@@ -12,6 +12,6 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(bind=engine)
-    obj = session.query(State).filter_by(id=2)
-    obj.name = "New Mexico"
+    obj = session.query(State).filter(State.name.like('%a%')).all()
+    [session.delete(objs) for objs in obj]
     session.commit()
