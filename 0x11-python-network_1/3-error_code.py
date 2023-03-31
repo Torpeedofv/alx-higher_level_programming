@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Takes in a url, sends a request to the url and displays the body of the response"""
+"""Takes in a url, sends a request to the url and displays the body
+of the response"""
 
 
 import urllib.request
