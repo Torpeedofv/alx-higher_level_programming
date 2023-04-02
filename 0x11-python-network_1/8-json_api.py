@@ -15,10 +15,11 @@ if __name__ == "__main__":
     new_param = payload
     r = requests.post('http://0.0.0.0:5000/search_user', data=new_param)
     response = r.json()
-    if type(response) == dict:
-        if len(response) == 0:
-            print("No result")
-        else:
-            print(f"[{response.get('id')}] {response.get('name')}")
-    else:
+    try:
+        if type(response) == dict:
+            if len(response) == 0:
+                print("No result")
+            else:
+                print(f"[{response.get('id')}] {response.get('name')}")
+    except ValueError:
         print("Not a valid JSON")
