@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-#Fetches an url using the reqests package and formatting the respone display
+"""Fetches an url using the reqests package and formatting the respone display
+"""
 
 
 import requests
