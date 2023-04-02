@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""takes in a letter and sends a Post request to a URL with the letter as a parameter
+"""
+takes in a letter and sends a Post request to a URL with the
+letter as a parameter
 """
 
 
@@ -7,7 +9,7 @@ import requests
 import sys
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        payload = {'q': ""} 
+        payload = {'q': ""}
     else:
         payload = {'q': sys.argv[1]}
     new_param = payload
